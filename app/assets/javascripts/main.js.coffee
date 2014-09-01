@@ -14,6 +14,6 @@
   }).
   otherwise({
       templateUrl: '../templates/photos/index',
-      controller: 'Photos'
+      controller: 'PhotoIndexController'
     })
 ])
