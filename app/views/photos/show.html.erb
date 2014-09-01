@@ -1,4 +1,11 @@
 <p id="notice"><%= notice %></p>
+<%= @photo.id %> <h1><%= @photo.title %></h1>
+<%= image_tag 'demo.jpeg', :size => "300x150" %>
+<h3>Comments</h3>
+<% @photo.comments.each do |comment| %>
+    <%= comment.comment_body.html_safe %> by <b><%= @photo.user.email %></b><br>
+<% end %>
 
+<br><br>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

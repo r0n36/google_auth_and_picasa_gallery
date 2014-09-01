@@ -10,7 +10,13 @@
       </ul>
     </div>
   <% end %>
-
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br><br>
+  <%= image_tag 'demo.jpeg', :size => "600x300" %><br><br>
+  <%= f.fields_for :comments, Comment.new do |ff| %>
+        <%= ff.label :comment_body %><br>
+        <%= ff.text_area :comment_body %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
