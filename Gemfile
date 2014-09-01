@@ -41,5 +41,5 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-
+gem 'nokogiri'
 
