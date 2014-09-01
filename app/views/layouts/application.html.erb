@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="photogallery">
 <head>
   <title>GoogleAuthAndPicasaGallery</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -14,7 +14,9 @@
     <%= link_to "Sign up", new_user_registration_path %> or
     <%= link_to "Sign in", new_user_session_path %>
 <% end %>
-<%= yield %>
+    <div ng-view>
+        <%= yield %>
+    </div>
 
 </body>
 </html>
